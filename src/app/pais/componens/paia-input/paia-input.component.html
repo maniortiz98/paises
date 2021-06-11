@@ -1,0 +1,14 @@
+<form
+    (ngSubmit)="buscar()" 
+    autocomplete="off">
+        <div class="input-group input-group-sm mb-3 container">
+            <input 
+                type="text" 
+                class="form-control" 
+                aria-describedby="inputGroup-sizing-sm"
+                [placeholder]="plaseholder"
+                name="termino"
+                [(ngModel)]="termino"
+                (input)="teclaPres()">
+        </div>
+</form>

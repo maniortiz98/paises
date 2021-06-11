@@ -1,0 +1,59 @@
+<div *ngIf="!verpais;else divPais" class="row alert alert-info container" >
+    Espere por favor...
+</div>
+
+<ng-template #divPais  >
+    <div class="row">
+        <div class="col-12">
+            <h4>Pais: <small>{{verpais.name}}</small></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4 class="text-center">Bandera</h4>
+            <img [src]="verpais.flag" class="img-thumbnail" style="width: 100px;" alt="">
+        </div>
+        <div class="col-8 row container">
+            <h4 class="text-center">Informacion</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Poblacion:</strong> <small> {{ verpais.population | number}}</small>
+                </li>
+                <li class="list-group-item">
+                    <strong>Codigo numerico:</strong> <small> {{ verpais.numericCode| number}}</small>
+                </li>
+                <li class="list-group-item">
+                    <strong>Codigo alpha3:</strong> <small> {{ verpais.alpha3Code}}</small>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <h4>Traducciones</h4>
+    <style>
+        .mr-1{
+            margin-right: 5px;
+        }
+    </style>
+
+    <div class="row">
+        <div class="col-12">
+            <span class="badge bg-primary mr-1">{{verpais.translations.de}}</span>
+            <span class="badge bg-primary mr-1">{{verpais.translations.br}}</span>
+            <span class="badge bg-primary mr-1">{{verpais.translations.es}}</span>
+            <span class="badge bg-primary mr-1">{{verpais.translations.fa}}</span>
+            <span class="badge bg-primary mr-1">{{verpais.translations.fr}}</span>
+            <span class="badge bg-primary mr-1">{{verpais.translations.hr}}</span>
+            <span class="badge bg-primary mr-1">{{verpais.translations.it}}</span>
+            <span class="badge bg-primary mr-1">{{verpais.translations.ja}}</span>
+        </div>
+    </div>
+
+   <!-- <pre class="mt-4">
+        {{verpais | json}}
+    </pre>-->
+    <pre class="mt-4">
+        Manuel Ortiz
+    </pre>
+</ng-template>
+
